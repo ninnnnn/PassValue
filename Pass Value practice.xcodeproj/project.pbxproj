@@ -15,6 +15,8 @@
 		BE66204123CEA27C0053FD07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE66203F23CEA27C0053FD07 /* LaunchScreen.storyboard */; };
 		BE66204C23CEA27C0053FD07 /* Pass_Value_practiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE66204B23CEA27C0053FD07 /* Pass_Value_practiceTests.swift */; };
 		BE66205723CEA27C0053FD07 /* Pass_Value_practiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE66205623CEA27C0053FD07 /* Pass_Value_practiceUITests.swift */; };
+		BE66206523CEA43F0053FD07 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE66206423CEA43F0053FD07 /* ListTableViewCell.swift */; };
+		BE66206723CEA81E0053FD07 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE66206623CEA81E0053FD07 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		BE66205223CEA27C0053FD07 /* Pass Value practiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pass Value practiceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE66205623CEA27C0053FD07 /* Pass_Value_practiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pass_Value_practiceUITests.swift; sourceTree = "<group>"; };
 		BE66205823CEA27C0053FD07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE66206423CEA43F0053FD07 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		BE66206623CEA81E0053FD07 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +103,11 @@
 		BE66203323CEA2790053FD07 /* Pass Value practice */ = {
 			isa = PBXGroup;
 			children = (
+				BE66206923CEA92E0053FD07 /* View */,
+				BE66206823CEA9170053FD07 /* Controller */,
 				BE66203423CEA2790053FD07 /* AppDelegate.swift */,
 				BE66203623CEA2790053FD07 /* SceneDelegate.swift */,
-				BE66203823CEA2790053FD07 /* ViewController.swift */,
-				BE66203A23CEA2790053FD07 /* Main.storyboard */,
 				BE66203D23CEA27C0053FD07 /* Assets.xcassets */,
-				BE66203F23CEA27C0053FD07 /* LaunchScreen.storyboard */,
 				BE66204223CEA27C0053FD07 /* Info.plist */,
 			);
 			path = "Pass Value practice";
@@ -126,6 +129,25 @@
 				BE66205823CEA27C0053FD07 /* Info.plist */,
 			);
 			path = "Pass Value practiceUITests";
+			sourceTree = "<group>";
+		};
+		BE66206823CEA9170053FD07 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BE66203823CEA2790053FD07 /* ViewController.swift */,
+				BE66206623CEA81E0053FD07 /* AddViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE66206923CEA92E0053FD07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE66206423CEA43F0053FD07 /* ListTableViewCell.swift */,
+				BE66203A23CEA2790053FD07 /* Main.storyboard */,
+				BE66203F23CEA27C0053FD07 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE66206723CEA81E0053FD07 /* AddViewController.swift in Sources */,
 				BE66203923CEA2790053FD07 /* ViewController.swift in Sources */,
+				BE66206523CEA43F0053FD07 /* ListTableViewCell.swift in Sources */,
 				BE66203523CEA2790053FD07 /* AppDelegate.swift in Sources */,
 				BE66203723CEA2790053FD07 /* SceneDelegate.swift in Sources */,
 			);

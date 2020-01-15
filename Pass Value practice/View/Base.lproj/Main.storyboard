@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gfc-0a-4cE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pass_Value_practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jlg-eL-3Sb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="FSZ-0b-Gap" customClass="ListTableViewCell" customModule="Pass_Value_practice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="52.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FSZ-0b-Gap" id="Yvw-qs-LAt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3k-m8-nk8">
+                                                    <rect key="frame" x="314" y="11" width="80" height="30.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="nE6-Q7-vfc"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Delete">
+                                                        <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                            <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="deleteBtn:" destination="FSZ-0b-Gap" eventType="touchUpInside" id="Qbe-7B-uGr"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eht-1Z-rsM">
+                                                    <rect key="frame" x="20" y="11" width="42" height="30.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="J3k-m8-nk8" firstAttribute="trailing" secondItem="Yvw-qs-LAt" secondAttribute="trailingMargin" id="1Wq-Vq-fK7"/>
+                                                <constraint firstItem="eht-1Z-rsM" firstAttribute="top" secondItem="Yvw-qs-LAt" secondAttribute="topMargin" id="20g-oD-fed"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="J3k-m8-nk8" secondAttribute="bottom" id="T8w-Wa-B1g"/>
+                                                <constraint firstItem="J3k-m8-nk8" firstAttribute="top" secondItem="Yvw-qs-LAt" secondAttribute="topMargin" id="beL-CL-lDq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eht-1Z-rsM" secondAttribute="bottom" id="cZC-m1-T6a"/>
+                                                <constraint firstItem="eht-1Z-rsM" firstAttribute="leading" secondItem="Yvw-qs-LAt" secondAttribute="leadingMargin" id="z0i-j9-x20"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="deleteBtn" destination="J3k-m8-nk8" id="dtC-nw-7bs"/>
+                                            <outlet property="label" destination="eht-1Z-rsM" id="VX0-j9-887"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jlg-eL-3Sb" secondAttribute="trailing" id="2ky-LM-MgO"/>
+                            <constraint firstItem="jlg-eL-3Sb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BXv-cH-NaV"/>
+                            <constraint firstItem="jlg-eL-3Sb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VA9-ay-FH5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jlg-eL-3Sb" secondAttribute="bottom" id="ySg-e7-kNw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="izz-eH-1My">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pv3-bK-aRh">
+                            <connections>
+                                <action selector="addBtn:" destination="BYZ-38-t0r" id="brF-xj-Ebz"/>
+                                <segue destination="Ifk-Ew-cvO" kind="show" id="p8Q-mB-4Un"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="jlg-eL-3Sb" id="rrH-E2-5dk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="2WO-hx-Cyb">
+            <objects>
+                <viewController storyboardIdentifier="ListSB" id="Ifk-Ew-cvO" customClass="AddViewController" customModule="Pass_Value_practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8UJ-i2-z4r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pJ3-8d-BsZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YVa-0X-WsA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qVZ-Fj-6gA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5mu-QH-9Rn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gfc-0a-4cE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VeD-2j-jrq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="40R-cY-hmI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybs-I1-Bzv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
