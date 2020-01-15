@@ -8,12 +8,21 @@
 
 import UIKit
 
+protocol DeleteCellDelegate: AnyObject {
+    func removeCell(_ cell: ListTableViewCell)
+}
+
 class ListTableViewCell: UITableViewCell {
+    
+    weak var delegate: DeleteCellDelegate?
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var deleteBtn: UIButton!
     @IBAction func deleteBtn(_ sender: Any) {
-        touchHandler?(s elf)
+        /* 檢查closure時請打開
+        touchHandler?(self)
+         */
+        self.delegate?.removeCell(self)
     }
     
     var touchHandler: ((UITableViewCell) -> Void)?
@@ -29,8 +38,5 @@ class ListTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
 }
