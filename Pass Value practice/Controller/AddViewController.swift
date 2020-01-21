@@ -8,9 +8,16 @@
 
 import UIKit
 
+protocol EditCellDelegate: AnyObject {
+    func editCell(text: String, index: Int)
+}
+
 class AddViewController: UIViewController {
     
+    weak var delegate: EditCellDelegate?
     let width = UIScreen.main.bounds.width
+    let textField = UITextField()
+    let checkBtn = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,9 +25,12 @@ class AddViewController: UIViewController {
         initView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getCellContent(textField: textField)
+    }
+    
     func initView() {
-        let textField = UITextField()
-        let checkBtn = UIButton()
         self.view.addSubview(textField)
         self.view.addSubview(checkBtn)
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -44,5 +54,14 @@ class AddViewController: UIViewController {
         checkBtn.setTitle("Check", for: .normal)
         checkBtn.setTitleColor(.white, for: .normal)
         checkBtn.backgroundColor = .black
+    }
+    
+    func getCellContent(textField: UITextField) {
+        delegate?.editCell(text: textField.text!, index: 5)
+        checkBtn.addTarget(self, action: #selector(sendTextToTableView), for: .touchUpInside)
+    }
+    
+    @objc func sendTextToTableView() {
+        
     }
 }
